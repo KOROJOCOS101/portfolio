@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kiibati O. | Web Developer</title>
+  <meta name="description" content="Portfolio of Agbara Oluwakiibati Orojo: web development projects.">
+  <link rel="icon" href="assets/logo.svg">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&family=Outfit:wght@300;400;600;800&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="frame">
+
+  <header class="bar">
+    <p class="who">Agbara Oluwakiibati Orojo, <i>Web Developer</i></p>
+    <nav aria-label="Main">
+      <a class="on" href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="logo" href="#home" aria-label="Back to top"><img src="assets/logo.svg" alt="" width="34" height="31"></a>
+  </header>
+
+  <main>
+    <section id="home" class="block hero">
+      <div>
+        <h1>I am <i>Kiibati O.</i></h1>
+        <span class="down" aria-hidden="true">&darr;</span>
+        <div class="intro">
+          <p>Hi there, I&rsquo;m Kiibati, a computer science student at Pan-Atlantic University who builds websites.</p>
+          <p>I design and code responsive pages with HTML, CSS and JavaScript, and I care about layouts that stay clear and readable on any screen.</p>
+          <p>Most of my work is on the front end, but I&rsquo;ve also built a desktop app in Java and a full-stack system with NestJS and PostgreSQL. I like clean interfaces and learning new tools by building real things.</p>
+        </div>
+      </div>
+      <div class="portrait" data-img="assets/me.png" data-alt="Portrait of Agbara Oluwakiibati Orojo">
+        <!-- Placeholder illustration. Add assets/me.png and it replaces this automatically. -->
+        <svg viewBox="0 0 220 250" role="img" aria-label="Illustrated portrait">
+          <path d="M60 90Q58 30 110 28Q165 30 162 92L156 150Q145 215 110 226Q75 215 64 150Z" fill="#f2b48c"/>
+          <path d="M54 104Q38 14 112 16Q186 18 168 104Q160 58 130 50Q92 60 84 84Q70 68 54 104Z" fill="#7a3f24"/>
+          <ellipse cx="88" cy="114" rx="13" ry="10" fill="#fff"/><circle cx="90" cy="115" r="5" fill="#1b1b1b"/>
+          <ellipse cx="134" cy="114" rx="13" ry="10" fill="#fff"/><circle cx="136" cy="115" r="5" fill="#1b1b1b"/>
+          <path d="M72 98l30-6M120 92l30 6" stroke="#4a2411" stroke-width="5" stroke-linecap="round"/>
+          <path d="M72 130l22 4-14 15zM150 130l-22 4 14 15z" fill="#fff"/>
+          <path d="M111 120l-8 30 14 2" fill="none" stroke="#c9825a" stroke-width="3" stroke-linecap="round"/>
+          <path d="M92 182Q111 198 130 182" fill="none" stroke="#7a2230" stroke-width="5" stroke-linecap="round"/>
+        </svg>
+      </div>
+    </section>
+
+    <section id="about" class="block">
+      <h2>This is me</h2>
+      <ul class="tiles">
+        <li><figure><div class="tile t1" data-img="assets/me-1.jpg"><span>HTML</span></div><figcaption>Markup <i>Kiibati</i></figcaption></figure></li>
+        <li><figure><div class="tile t2" data-img="assets/me-2.jpg"><span>CSS</span></div><figcaption>Styling <i>Kiibati</i></figcaption></figure></li>
+        <li><figure><div class="tile t3" data-img="assets/me-3.jpg"><span>JS</span></div><figcaption>Scripting <i>Kiibati</i></figcaption></figure></li>
+        <li><figure><div class="tile t4" data-img="assets/me-4.jpg"><span>UI</span></div><figcaption>Design <i>Kiibati</i></figcaption></figure></li>
+        <li><figure><div class="tile t5" data-img="assets/me-5.jpg"><span>Git</span></div><figcaption>Version control <i>Kiibati</i></figcaption></figure></li>
+        <li><figure><div class="tile t6" data-img="assets/me-6.jpg"><span>CS</span></div><figcaption>Student <i>Kiibati</i></figcaption></figure></li>
+      </ul>
+    </section>
+
+    <section id="projects" class="block">
+      <h2>Selected <i>works</i></h2>
+      <div class="works">
+
+        <article class="work work--lead">
+          <div class="shot" data-img="assets/shots/project-1.png" data-alt="Menu screen of the Cafeteria App">
+            <pre class="ph" aria-hidden="true">Screenshot
+coming soon</pre>
+          </div>
+          <h3>Cafeteria App</h3>
+          <p>A desktop ordering app for a campus cafeteria. Students sign up, browse the menu by category, add meals to a cart and check out, while a manager account keeps the menu and stock levels up to date.</p>
+          <ul class="tags"><li>Java</li><li>JavaFX</li><li>PostgreSQL</li><li>CSS</li></ul>
+          <a class="link" href="project.html">Read the case study</a>
+        </article>
+
+        <article class="work">
+          <div class="shot" data-img="assets/shots/project-2.png" data-alt="Order history page of TastyBites">
+            <pre class="ph" aria-hidden="true">Screenshot
+coming soon</pre>
+          </div>
+          <h3>TastyBites</h3>
+          <p>A full-stack system for a restaurant to keep records of its customers and their orders. The React front end talks to a NestJS API that saves everything in PostgreSQL, and the whole thing runs in Docker behind Nginx.</p>
+          <ul class="tags"><li>React</li><li>TypeScript</li><li>NestJS</li><li>PostgreSQL</li><li>Docker</li><li>Nginx</li></ul>
+          <a class="link" href="https://github.com/KOROJOCOS101/portfolio/tree/main/projects/tastybites" target="_blank" rel="noopener">View on GitHub</a>
+        </article>
+
+        <article class="work">
+          <div class="shot" data-img="assets/shots/project-3.png" data-alt="Profile and order screens of the Chef Maria app">
+            <pre class="ph" aria-hidden="true">Screenshot
+coming soon</pre>
+          </div>
+          <h3>Chef Maria</h3>
+          <p>A small mobile app for a restaurant where customers fill in their profile and log an order straight from their phone, with a tab for each screen.</p>
+          <ul class="tags"><li>React Native</li><li>Expo</li><li>TypeScript</li></ul>
+          <a class="link" href="https://github.com/KOROJOCOS101/portfolio/tree/main/projects/chef-maria" target="_blank" rel="noopener">View on GitHub</a>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="contact" class="block cta">
+      <h2>Let&rsquo;s <i>talk</i></h2>
+      <p>Have a project in mind, or want a developer who cares about clean, working websites? Send me a message.</p>
+      <div class="actions">
+        <a class="btn" href="mailto:Agbaraoluwakiibatiorojo@gmail.com">Email me</a>
+        <a class="btn btn--ghost" href="https://github.com/KOROJOCOS101" target="_blank" rel="noopener">GitHub</a>
+      </div>
+      <p class="small">Agbaraoluwakiibatiorojo@gmail.com</p>
+    </section>
+  </main>
+
+  <footer>&copy; 2026 Agbara Oluwakiibati Orojo. Matric No: 23120112049</footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

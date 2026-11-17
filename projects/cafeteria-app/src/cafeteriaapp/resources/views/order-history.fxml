@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="639.0" prefWidth="835.0"
+            stylesheets="@../css/styles.css"
+            xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="cafeteriaapp.resources.controllers.OrderHistoryController">
+
+    <top>
+        <VBox style="-fx-background-color: #2f4f4f;" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets top="24.0" bottom="24.0" left="24.0" right="24.0"/>
+            </padding>
+            <Label text="Order History" textFill="WHITE">
+                <font><Font name="System Bold" size="22.0"/></font>
+            </Label>
+            <Label text="Your past orders are shown below."
+                   style="-fx-text-fill: rgba(255,255,255,0.65); -fx-font-size: 13px;">
+                <VBox.margin><Insets top="4.0"/></VBox.margin>
+            </Label>
+        </VBox>
+    </top>
+
+    <center>
+        <ScrollPane fitToWidth="true" BorderPane.alignment="CENTER"
+                    style="-fx-background-color: transparent; -fx-border-color: transparent;">
+            <BorderPane.margin>
+                <Insets top="16.0" left="20.0" right="20.0" bottom="16.0"/>
+            </BorderPane.margin>
+            <content>
+                <VBox fx:id="orderListContainer" spacing="12.0"/>
+            </content>
+        </ScrollPane>
+    </center>
+
+</BorderPane>

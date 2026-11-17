@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="950.0" style="-fx-background-color: #f8f9fa;" stylesheets="@../css/styles.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cafeteriaapp.resources.controllers.ManagerController">
+   
+   <top>
+      <HBox alignment="CENTER_LEFT" prefHeight="75.0" prefWidth="200.0" styleClass="brand-panel" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label styleClass="brand-name" text="Cafeteria Management System">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label style="-fx-text-fill: rgba(255,255,255,0.6);" styleClass="muted-label" text="Manager Dashboard" />
+               </children>
+            </VBox>
+            <Button mnemonicParsing="false" onAction="#handleLogout" style="-fx-border-color: #000000; -fx-text-fill: #ffffff;" styleClass="add-btn" text="Sign Out" />
+         </children>
+         <padding>
+            <Insets left="25.0" right="25.0" />
+         </padding>
+      </HBox>
+   </top>
+
+   <center>
+      <HBox prefHeight="100.0" prefWidth="200.0" spacing="25.0" BorderPane.alignment="CENTER">
+         <children>
+            
+            <VBox prefWidth="520.0" spacing="15.0" style="-fx-background-radius: 12px; -fx-border-color: #e2e8f0; -fx-border-radius: 12px; -fx-border-width: 1px;" styleClass="form-container" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label style="-fx-font-size: 16px;" styleClass="field-label" text="Menu Inventory" />
+                  <ScrollPane fitToWidth="true" styleClass="scroll-pane">
+                     <content>
+                        <VBox fx:id="menuListContainer" spacing="12.0">
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </VBox>
+                     </content>
+                  </ScrollPane>
+               </children>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+            </VBox>
+            
+            <VBox maxWidth="380.0" minWidth="340.0" prefWidth="360.0" spacing="15.0" style="-fx-background-radius: 12px; -fx-border-color: #e2e8f0; -fx-border-radius: 12px; -fx-border-width: 1px;" styleClass="form-container">
+               <children>
+                  <Label fx:id="formTitle" style="-fx-font-size: 16px;" styleClass="field-label" text="Add New Item" />
+                  
+                  <GridPane vgap="12.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="90.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label styleClass="field-label" text="Item Name *" />
+                        <TextField fx:id="nameField" styleClass="form-field" GridPane.rowIndex="1" />
+                        
+                        <Label styleClass="field-label" text="Category *" GridPane.rowIndex="2" />
+                        <TextField fx:id="categoryField" styleClass="form-field" GridPane.rowIndex="3" />
+                        
+                        <Label styleClass="field-label" text="Price (₦) *" GridPane.rowIndex="4" />
+                        <TextField fx:id="priceField" styleClass="form-field" GridPane.rowIndex="5" />
+                        
+                        <Label styleClass="field-label" text="Quantity in Stock *" GridPane.rowIndex="6" />
+                        <TextField fx:id="quantityField" styleClass="form-field" GridPane.rowIndex="7" />
+                        
+                        <Label styleClass="field-label" text="Description" GridPane.rowIndex="8" />
+                        <TextArea fx:id="descriptionField" prefHeight="200.0" prefWidth="200.0" style="-fx-padding: 6px;" styleClass="form-field" wrapText="true" GridPane.rowIndex="9" />
+                     </children>
+                  </GridPane>
+                  
+                  <HBox spacing="12.0">
+                     <children>
+                        <Button fx:id="submitBtn" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleSubmit" styleClass="primary-btn" text="Add Item" HBox.hgrow="ALWAYS" />
+                        <Button mnemonicParsing="false" onAction="#handleClear" prefWidth="85.0" styleClass="google-btn" text="Back" />
+                     </children>
+                     <VBox.margin>
+                        <Insets top="8.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+            </VBox>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </HBox>
+   </center>
+</BorderPane>

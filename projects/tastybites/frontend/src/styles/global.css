@@ -1,0 +1,32 @@
+:root {
+  --primary-color: #E67E22; /* TastyBites Orange */
+  --secondary-color: #D35400;
+  --text-color: #fff;
+  --bg-light: #FAE5D3;
+}
+
+body {
+  background-color: var(--bg-light);
+  color: var(--text-color);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  background-color: var(--primary-color);
+  padding: 10px;
+}
+
+button {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: var(--secondary-color);
+}

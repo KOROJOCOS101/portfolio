@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cafeteria App | Kiibati O.</title>
+  <link rel="icon" href="assets/logo.svg">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&family=Outfit:wght@300;400;600;800&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="frame">
+
+  <header class="bar">
+    <p class="who">Agbara Oluwakiibati Orojo, <i>Web Developer</i></p>
+    <nav aria-label="Main">
+      <a href="index.html#home">Home</a>
+      <a href="index.html#about">About</a>
+      <a class="on" href="index.html#projects">Projects</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <a class="logo" href="index.html" aria-label="Home"><img src="assets/logo.svg" alt="" width="34" height="31"></a>
+  </header>
+
+  <main class="block page">
+    <h1>Cafeteria <i>App</i></h1>
+
+    <figure class="figure">
+      <div class="shot" data-img="assets/shots/project-1.png" data-alt="Menu screen of the Cafeteria App">
+        <pre class="ph" aria-hidden="true">Screenshot
+coming soon</pre>
+      </div>
+    </figure>
+
+    <section>
+      <h2>Overview</h2>
+      <p>The Cafeteria App is a desktop app for ordering food from a campus cafeteria. A student creates an account, logs in, scrolls through the menu (drinks, main meals, swallow, protein and snacks), adds what they want to a cart and places the order. Every order is saved, so they can look back at what they bought and how much it came to.</p>
+      <p>There is also a manager login that opens a separate dashboard, where the cafeteria staff can add new meals, change prices and keep the stock count right.</p>
+    </section>
+
+    <section>
+      <h2>The problem I <i>solved</i></h2>
+      <p>At lunch time the cafeteria queue gets long and a lot of the wait is people asking what&rsquo;s available and how much it costs. Staff also had no easy way to see what was running low. I wanted one app where students can see the menu, prices and what&rsquo;s left before they order, and where the stock goes down on its own every time an order is placed.</p>
+    </section>
+
+    <section>
+      <h2>Features</h2>
+      <ul class="plain">
+        <li>Sign up and log in, with passwords hashed using BCrypt before they go into the database.</li>
+        <li>Menu grouped by category, showing the price and how many are left of each item.</li>
+        <li>Cart where you can change quantities or remove items, with the total updating as you go.</li>
+        <li>Placing an order saves it with all its items and takes the quantities off the stock.</li>
+        <li>Order history page listing past orders with their items and totals.</li>
+        <li>Wallet and profile pages, plus a bottom navigation bar to move between them.</li>
+        <li>Manager dashboard to add, edit and delete menu items and set the stock.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Screenshots</h2>
+      <div class="cols">
+        <figure class="figure"><div class="shot" data-img="assets/shots/project-1-detail-a.png" data-alt="Login and sign up screen"><pre class="ph" aria-hidden="true">Screenshot
+coming soon</pre></div><figcaption>Login and sign up</figcaption></figure>
+        <figure class="figure"><div class="shot" data-img="assets/shots/project-1-detail-b.png" data-alt="Cart with three items"><pre class="ph" aria-hidden="true">Screenshot
+coming soon</pre></div><figcaption>The cart</figcaption></figure>
+        <figure class="figure"><div class="shot" data-img="assets/shots/project-1-detail-c.png" data-alt="Order history with two past orders"><pre class="ph" aria-hidden="true">Screenshot
+coming soon</pre></div><figcaption>Order history</figcaption></figure>
+        <figure class="figure"><div class="shot" data-img="assets/shots/project-1-detail-d.png" data-alt="Manager dashboard with the menu inventory and add item form"><pre class="ph" aria-hidden="true">Screenshot
+coming soon</pre></div><figcaption>Manager dashboard</figcaption></figure>
+      </div>
+    </section>
+
+    <section>
+      <h2>Technologies <i>used</i></h2>
+      <ul class="tags"><li>Java</li><li>JavaFX</li><li>FXML</li><li>CSS</li><li>PostgreSQL</li><li>JDBC</li><li>BCrypt</li><li>NetBeans</li></ul>
+      <p>The screens are built in FXML and styled with a JavaFX stylesheet. Each screen has its own controller, and the data lives in four PostgreSQL tables: users, menu_items, orders and order_items.</p>
+    </section>
+
+    <section>
+      <h2>What I <i>learned</i></h2>
+      <ul class="plain">
+        <li>How to connect a Java app to PostgreSQL with JDBC and use prepared statements instead of building SQL strings by hand.</li>
+        <li>Database calls can freeze a JavaFX window, so the login and sign up checks run in a background Task with a loading spinner on top.</li>
+        <li>Splitting the app into FXML views and controllers made it much easier to add new screens later.</li>
+        <li>Next I want to finish the wallet top up and add a search bar to the menu.</li>
+      </ul>
+    </section>
+
+    <div class="actions" style="justify-content:flex-start">
+      <a class="btn" href="https://github.com/KOROJOCOS101/portfolio/tree/main/projects/cafeteria-app" target="_blank" rel="noopener">View the code</a>
+      <a class="btn btn--ghost" href="index.html#projects">Back to projects</a>
+    </div>
+  </main>
+
+  <footer>&copy; 2026 Agbara Oluwakiibati Orojo. Matric No: 23120112049 &middot; <a href="mailto:Agbaraoluwakiibatiorojo@gmail.com">Agbaraoluwakiibatiorojo@gmail.com</a></footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
